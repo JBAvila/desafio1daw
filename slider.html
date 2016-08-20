@@ -1,0 +1,32 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" type="text/css" href="css/slider.css">
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<title>Slider prueba</title>
+	</head>
+<body>
+
+			<div class="container">
+				<h1>prueba slider 1</h1>
+				<div id="slider">
+					<div><img src="galeria/papa2.jpg"></div>
+					<div><img src="galeria/apoca.jpg"></div>
+					<div><img src="galeria/apo.jpg"></div>
+					
+				</div>
+			</div>
+
+<script type="text/javascript">
+	$(function(){
+		$('#slider div:gt(0)').hide;
+		setInterval(function(){
+			$('#slider div:first-child').fadeOut(1000)
+			.next('div').fadeIn(1000)
+			.end().appendTo('#slider')
+		},3000)
+	})
+</script>
+</body>
+</html>

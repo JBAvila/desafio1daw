@@ -1,0 +1,56 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>Gestores de Contenidos</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="css/slider.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body id="cuerpo">
+	<header>
+		<table id="encabezado">
+			<tr>
+				<td><h2 id="titulo">Administraci&oacute;n de Gestores de Contenidos</h2></td>
+				<td><div id="logo"><img src="img/udb.png"></div></td>
+			</tr>
+		</table>
+	</header>
+	<section id="principal">
+		 <div id="banner"> <img src="img/banner4.jpg"></div>
+		 <section class="content">
+		 	<br>
+		 	<div id="slider">
+		 			<div class="imagen"><img src="galeria/pope.jpg"></div>
+		 			<div class="imagen"><img src="galeria/html.jpg"></div>
+		 			<div class="imagen"><img src="galeria/css.png"></div>
+			</div>
+
+		 </section>
+		 <footer>
+		 	<p id="pie">Todos los Derechos Reservados | Universidad Donbosco | Gestores</p>
+		 	<table id="redes">
+		 		<tr>
+		 			<td><img src="img/fb.png"></td>
+		 			<td><img src="img/tw.png"></td>
+		 			<td><img src="img/yt.png"></td>
+		 			<td><img src="img/eng.png"></td>
+		 			<td><img src="img/esp.png"></td>
+		 		</tr>
+		 	</table>
+		 </footer>
+	</section>
+
+
+<script type="text/javascript">
+	$(function(){
+		$('#slider div:gt(0)').hide;
+		setInterval(function(){
+			$('#slider div:first-child').fadeOut(1000)
+			.next('div').fadeIn(1000)
+			.end().appendTo('#slider')
+		},3000)
+	})
+</script>
+</body>
+</html>
